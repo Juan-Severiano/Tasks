@@ -11,7 +11,7 @@ import SwiftUI
 struct TasksApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TaskView(task: TaskModel(title: "Code", date: "Qua. 12 de mar.", isDone: true))
         }
     }
 }
