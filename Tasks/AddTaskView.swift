@@ -26,7 +26,7 @@ struct AddTaskView: View {
                     selection: $taskDate
                 )
                 .datePickerStyle(
-                    .automatic
+                    .compact
                 )
             }
             .toolbar {
@@ -38,15 +38,12 @@ struct AddTaskView: View {
                         )
                         tasks.append(newTask)
                         dismiss()
-                        print("Salvar")
                     } label: {
                         Text("Save")
                     }
                 }
                 
-                ToolbarItem(
-                    placement: .cancellationAction
-                ) {
+                ToolbarItem(placement: .cancellationAction) {
                     Button {
                         dismiss()
                     } label: {
