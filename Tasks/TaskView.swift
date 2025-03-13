@@ -14,7 +14,7 @@ struct TaskView: View {
         HStack {
             VStack(alignment: .leading) {
                 Text(task.title)
-                Text(task.date)
+                Text(task.date.formatted())
                     .foregroundStyle(.secondary)
             }
             
@@ -35,5 +35,5 @@ struct TaskView: View {
 }
 
 #Preview {
-    TaskView(task: TaskModel(title: "Code", date: "Qua. 12 de mar.", isDone: true))
+    TaskView(task: TaskModel(title: "Code", date: Date(), isDone: true))
 }
